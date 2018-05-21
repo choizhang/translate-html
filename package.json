@@ -1,0 +1,24 @@
+{
+  "name": "translate",
+  "version": "1.0.0",
+  "description": "translate html to other language",
+  "author": "weii.zhang <weii.zhang@Istuary.com>",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "lint": "eslint --ext .js,.vue src",
+    "build": "node build/build.js"
+  },
+  "dependencies": {
+    "fs-path": "0.0.24"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "yargs": "^11.0.0"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  }
+}

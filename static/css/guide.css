@@ -1,0 +1,70 @@
+/* 通用样式 */
+*{margin: 0; padding: 0;-webkit-overflow-scrolling : touch;}
+html,body{ color: #333;height: 100%;}
+html{font-size: 16px; font-family: -apple-system-font,Helvetica Neue,sans-serif, Droid Sans;}
+ul,li,ol{ list-style-type: none; }
+img{border: none}
+a{text-decoration: none; color: #333}
+i,em{font-style:normal}
+/*h1,h2,h3,h4,h5,h6{ padding: 0 .9375rem; line-height: 2}*/
+h1{font-size: 1.6875rem; padding-top: 1.25rem; line-height: 2.375rem; color:#7B4CB2;}
+h2{font-size: 1.5rem;padding-top: 1.5rem;}
+h3{font-size: 1.25rem; padding-top: 2.5rem; line-height: 1.75rem}
+h4{font-size: 1.125rem; padding-top:.9375rem; line-height: 1.5625rem}
+h5{font-size: 1rem; padding-top:.625rem; line-height: 1.25rem}
+h6{font-size: .75rem; font-weight: normal;color: #929292; line-height: 1; padding: .625rem 0}
+
+nav a::before, aside .title::before{content: ''; display: inline-block; background: no-repeat center center; background-size: 100% auto; width: 1rem; height: 1rem; margin-right: 8px;}
+
+/* 侧边导航样式 */
+aside{position: fixed; width: 100%; top: 0; bottom: 0; z-index: 1; line-height: 50px; display: none;}
+aside .menu, aside .blank{position: absolute; top: 0;left: 0; height: 100%}
+aside .blank{ background-color:rgba(0,0,0,.3); width: 100%; opacity: 0}
+aside .menu{background-color: #fff; width: 80%; height: 100%; overflow: auto; margin-left: -400px}
+aside .title{padding: 0 10px; border-bottom: 1px solid #eee; display: flex; align-items: center;}
+aside .title::before{background-image: url(../img/icon_directory_travelkit.png);}
+
+aside .menu::-webkit-scrollbar, article::-webkit-scrollbar{display:none;}
+
+aside li{ border-bottom: 1px solid #eee; padding:0 10px;}
+aside ul.sub-menu {display: flex; flex-wrap: wrap; padding-bottom: 10px;}
+aside .sub-menu li{ border:none;padding: 0 5px; line-height: 2.5rem}
+aside .sub-menu a{ color: #666; padding-right: 10px;}
+aside .sub-menu a::before{content: ''; width: 6px; height: 6px; border-radius: 4px; background-color: #D8D8D8; display: inline-block;margin-right: 8px;}
+
+/* 主体内容样式 */
+
+header{padding-top: .625rem;}
+header img{margin-top: 10px;}
+header div.tit{border-left: 6px solid #ef5aa1; padding-left: 10px; margin:.25rem 0; font-size: 18px; font-weight: bold; line-height: .95}
+article{position: absolute; top: 0;line-height: 1.5; width: 100%; overflow: auto;bottom: 50px;}
+article > div{padding:0 .9375rem 2.5rem .9375rem;}
+article img,article table{width: 100% !important; height: auto;}
+article a, article em{color: #6FA7FF;}
+article p,article li,article table{padding-top: .625rem; color: #666;word-wrap:break-word}
+article p{text-align: justify; word-wrap:break-word}
+
+
+/* 底部导航样式 */
+nav{position: fixed; bottom: 0; left: 0; width: 100%;background: #fff; height: 50px; display: flex;; box-shadow:  0 2px 10px 0 rgba(0,0,0,.2);}
+nav a{height: 50px; flex: 6; min-width:0; line-height: 1.5; display: flex; align-items: center;padding-left: 10px; background: url(../img/nav_line.gif) no-repeat right center;}
+nav a:last-child{background: none}
+
+nav p{font-size: .75rem}
+nav span{display: block; color: #999;}
+nav b{display: block; overflow: hidden;text-overflow:ellipsis;white-space: nowrap;max-width: 300px; font-weight: normal;}
+nav .btn{text-align: center; flex: 5; justify-content: center; font-size: 1rem}
+nav .btn::before{background-image: url(../img/icon_directory_travelkit.png);}
+nav .prev::before{background-image: url(../img/icon_upward_travelkit.png);}
+nav .next::before{background-image: url(../img/icon_down_travelkit.png);}
+
+
+@media only screen and (max-width: 361px) {
+	html{ font-size: 14px; }
+}
+@media only screen and (min-width: 362px) and (max-width: 380px) {
+	html{ font-size: 16px; }
+}
+@media only screen and (min-width: 381px) {
+	html{ font-size: 18px; }
+}
