@@ -34,9 +34,6 @@ const destination = args.d;
 var files = fs.readdirSync(path.join(__dirname, '/static/sc/', destination));
 
 files.forEach((filename) => {
-    // var fullname = path.join(dir,filename);
-
-    console.log(22, filename)
 
     if(filename.includes('.html')){
         translateOnePage(filename);
@@ -55,7 +52,7 @@ function translateOnePage(filename){
     (async function(){
         while(number > 0){
             words = text.substring(split*index, split*(index+1));
-            str += await aa(words);
+            str += await translateGoogle(words);
             number -= split;
             index++;
         }
@@ -66,7 +63,7 @@ function translateOnePage(filename){
 }
 
 
-async function aa(words){
+async function translateGoogle(words){
     try{
         const response = await axios.get('http://127.0.0.1:8360/translate', {
             params: {
